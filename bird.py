@@ -1,6 +1,6 @@
 import cv2
 import numpy as np
-from numpy import array, uint8
+from numpy import uint8
 
 def Sobel_edge_detection(f):
     cv2.threshold(img,dst=img,*(89,255,0))
@@ -14,7 +14,7 @@ def Sobel_edge_detection(f):
 
 if __name__ == '__main__' :
 
-    img = cv2.imread("img/BalaenicepsRex/2.jpg",-1)
+    img = cv2.imread("img/BalaenicepsRex/4.jpg",-1)
     cv2.imshow("original", img)
     img1 = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
     img2 = Sobel_edge_detection(img1)
