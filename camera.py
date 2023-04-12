@@ -1,7 +1,8 @@
 import cv2
 import numpy as np
 
-cap = cv2.VideoCapture(0)
+cap = cv2.VideoCapture('video/6.mp4')
+#cap = cv2.VideoCapture(0)
 face_cascade = cv2.CascadeClassifier(cv2.data.haarcascades + "haarcascade_frontalface_default.xml")
 
 while True:
@@ -10,8 +11,8 @@ while True:
 
     hsv = cv2.cvtColor(frame, cv2.COLOR_BGR2HSV)
 
-    lower_green = np.array([40, 50, 50])
-    upper_green = np.array([80, 255, 255])
+    lower_green = np.array([35, 50, 151])
+    upper_green = np.array([125, 255, 255])
 
    
     mask = cv2.inRange(hsv, lower_green, upper_green)
